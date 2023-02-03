@@ -52,9 +52,20 @@ aside {
     grid-template-rows: 1fr 3fr 6fr;
     grid-column: 1 / 2;
     grid-row: 1 / -1;
-    padding: 25px;
+    padding: 10px;
     background-color: var(--main-color);
 }
+
+    .nav-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    aside > div {
+        display: flex;
+        align-items: center;
+    }
 
     aside li {
         padding-bottom: 20px;
@@ -77,13 +88,14 @@ header {
     }
 
         .search-bar {
-            flex-grow: 7;
+            flex-grow: 8;
         }
 
         .user-settings {
             display: flex;
-            flex-grow: 3;
+            flex-grow: 2;
             justify-content: space-around;
+            align-items: center;
         }
 
     .user-info {
@@ -93,7 +105,10 @@ header {
     }
 
         .profile-message-container {
-            flex-grow: 6.5;
+            display: flex;
+            gap: 20px;
+            flex-grow: 9;
+            align-items: center;
         }
 
             .profile-message {
@@ -104,7 +119,7 @@ header {
 
         .user-actions {
             display: flex;
-            flex-grow: 3.5;
+            flex-grow: 1;
             justify-content: space-between;
         }
 
@@ -141,6 +156,7 @@ main {
         .project-actions {
             display: flex;
             justify-content: end;
+            gap: 20px;
         }
 
     .announcements {
@@ -181,6 +197,11 @@ main {
                 gap: 20px;
             }
 
+                .trending-item {
+                    display: flex;
+                    gap: 10px;
+                }
+
 /* Elements */
 
 li {
@@ -193,4 +214,88 @@ a {
     color: white
 }
 
+aside > div > svg,
+.profile-message-container svg {
+    height: auto;
+    width: 50px;
+}
+
+.nav-icon {
+    padding-left: 10px;
+}
+
+aside nav svg,
+.search-container svg,
+.configs svg,
+.projects svg {
+    height: auto;
+    width: 20px;
+}
+
+aside div svg {
+    margin-right: 10px;
+}
+
+.trending svg,
+.circular_icon_sm svg {
+    height: auto;
+    width: 30px;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}
+
 /* Modifiers */
+
+aside svg path {
+    margin: 0;
+    fill: white;
+}
+
+.circular_icon {
+    border: 1px solid transparent;
+    border-radius: 50%;
+}
+
+.dog-icon {
+    background-color: rgb(136, 255, 237);
+}
+
+    .dog-icon path {
+        fill: rgb(255, 122, 235);
+    }
+
+.cat-icon {
+    background-color: rgb(236, 209, 2);
+}
+
+    .cat-icon path {
+        fill: rgb(248, 247, 224);
+    }
+
+.rabbit-icon {
+    background-color: rgb(190, 190, 190);
+}
+
+    .rabbit-icon path {
+        fill: rgb(255, 176, 59);
+    }
+
+.owl-icon {
+    background-color: rgb(249, 124, 251);
+}
+
+    .owl-icon path {
+        fill: rgb(186, 255, 133);
+    }
+
+.user-actions_button {
+    color: white;
+    background-color: var(--main-color);
+    border: 1px solid  var(--main-color);
+    border-radius: 2rem;
+    padding: 5px 20px;
+    width: 85px;
+}
